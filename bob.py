@@ -6,15 +6,12 @@ Last modified on Fri Sep 25 16:32:24 2014
 """
 
 def hey(msg):
+    msg = msg.strip()    
+    if not msg:
+        return "Fine. Be that way!"
     if msg.isupper():
         return 'Whoa, chill out!'
     elif msg.endswith('?'):
         return "Sure."
-    elif msg == '':
-        return "Fine. Be that way!"
-    elif msg is None:
-        return "Fine. Be that way!"
-    elif msg == '    \t':
-        return "Fine. Be that way!"
     else:
         return "Whatever."
